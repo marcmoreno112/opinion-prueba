@@ -6,18 +6,16 @@ import { describe, expect, test } from "vitest";
 
 describe("Given an App component", () => {
   describe("When rendered", () => {
-    test("Then it should show the text 'Hello world!", () => {
-      const expectedText = /hello world!/i;
-
+    test("Then it should show a title", () => {
       render(
         <Provider store={store}>
           <App />
         </Provider>,
       );
 
-      const text = screen.getByText(expectedText);
+      const titles = screen.getAllByRole("heading");
 
-      expect(text).toBeInTheDocument();
+      expect(titles[0]).toBeInTheDocument();
     });
   });
 });
