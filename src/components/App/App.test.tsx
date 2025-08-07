@@ -12,7 +12,7 @@ describe("Given an App component", () => {
       render(
         <Provider store={store}>
           <App />
-        </Provider>
+        </Provider>,
       );
 
       const text = screen.getByText(expectedText);
