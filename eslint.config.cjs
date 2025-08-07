@@ -39,8 +39,8 @@ module.exports = defineConfig([
         "plugin:react/jsx-runtime",
         "plugin:react-hooks/recommended",
         "plugin:jsx-a11y/recommended",
-        "plugin:prettier/recommended",
-      ),
+        "plugin:prettier/recommended"
+      )
     ),
 
     settings: {
