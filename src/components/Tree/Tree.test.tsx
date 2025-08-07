@@ -6,9 +6,9 @@ describe("Given a Tree component", () => {
   describe("When rendered", () => {
     const expectedText = "Test text";
 
-    const expectedArgumentos = ["1st argument", "2nd argument", "3rd argument"];
+    const expectedTopics = ["first topic", "second topic", "third topic"];
 
-    const buttonText = "Empezar";
+    const buttonText = "Start";
 
     const testFunction = () => {};
 
@@ -16,7 +16,7 @@ describe("Given a Tree component", () => {
       render(
         <Tree
           title={expectedText}
-          argumentos={expectedArgumentos}
+          topics={expectedTopics}
           buttonText={buttonText}
           handleClick={testFunction}
         />,
@@ -27,19 +27,19 @@ describe("Given a Tree component", () => {
       expect(text).toBeInTheDocument();
     });
 
-    test("Then it should render the list of argumentos", () => {
+    test("Then it should render the list of topics", () => {
       render(
         <Tree
           title={expectedText}
-          argumentos={expectedArgumentos}
+          topics={expectedTopics}
           buttonText={buttonText}
           handleClick={testFunction}
         />,
       );
 
-      expectedArgumentos.forEach((argument) => {
-        const argumentElement = screen.getByText(argument);
-        expect(argumentElement).toBeInTheDocument();
+      expectedTopics.forEach((topic) => {
+        const topicElement = screen.getByText(topic);
+        expect(topicElement).toBeInTheDocument();
       });
     });
 
@@ -47,7 +47,7 @@ describe("Given a Tree component", () => {
       render(
         <Tree
           title={expectedText}
-          argumentos={expectedArgumentos}
+          topics={expectedTopics}
           buttonText={buttonText}
           handleClick={testFunction}
         />,
@@ -59,12 +59,12 @@ describe("Given a Tree component", () => {
     });
 
     test("Then it should call handleClick when the button is clicked", () => {
-      const handleClick = vi.fn(); // Crea un mock para la función handleClick
+      const handleClick = vi.fn();
 
       render(
         <Tree
           title={expectedText}
-          argumentos={expectedArgumentos}
+          topics={expectedTopics}
           buttonText={buttonText}
           handleClick={handleClick}
         />,

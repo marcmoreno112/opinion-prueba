@@ -4,14 +4,14 @@ import TreeStyled from "./TreeStyled";
 
 interface TreeProps {
   title: string;
-  argumentos: string[];
+  topics: string[];
   buttonText: string;
   handleClick: () => void;
 }
 
 const Tree: React.FC<TreeProps> = ({
   title,
-  argumentos,
+  topics,
   buttonText,
   handleClick,
 }: TreeProps): JSX.Element => {
@@ -28,8 +28,8 @@ const Tree: React.FC<TreeProps> = ({
       <div>
         <h3 className="temas">Temas</h3>
         <div className="list">
-          {argumentos.map((arg, index) => (
-            <Topic key={index} text={arg} />
+          {topics.map((topic, index) => (
+            <Topic key={`${index}-${topic}`} text={topic} />
           ))}
         </div>
       </div>
