@@ -17,7 +17,7 @@ const Tree: React.FC<TreeProps> = ({
 }: TreeProps): JSX.Element => {
   return (
     <TreeStyled>
-      <h1>{title}</h1>
+      <h1 className="title">{title}</h1>
 
       <div>Qué es el voto...</div>
       <div>Cómo funciona la norma actual</div>

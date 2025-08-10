@@ -6,6 +6,11 @@ const TopLevelPageStyled = styled.main`
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  margin-top: 20px;
+
+  .title {
+    font-size: 2rem;
+  }
 `;
 
 export default TopLevelPageStyled;

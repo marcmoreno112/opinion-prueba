@@ -6,7 +6,7 @@ import titles from "../../utils/titles";
 const TopLevelPage = (): JSX.Element => {
   return (
     <TopLevelPageStyled>
-      <h1>{titles.topLevel}</h1>
+      <h1 className="title">{titles.topLevel}</h1>
       <Tree
         title="Voto a los 16 años en elecciones generales"
         topics={[
