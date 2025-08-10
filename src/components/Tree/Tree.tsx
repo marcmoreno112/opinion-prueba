@@ -7,6 +7,7 @@ interface TreeProps {
   topics: string[];
   buttonText: string;
   handleClick: () => void;
+  explanations: string[];
 }
 
 const Tree: React.FC<TreeProps> = ({
@@ -14,14 +15,15 @@ const Tree: React.FC<TreeProps> = ({
   topics,
   buttonText,
   handleClick,
+  explanations,
 }: TreeProps): JSX.Element => {
   return (
     <TreeStyled>
       <h1 className="title">{title}</h1>
 
-      <div>Qué es el voto...</div>
-      <div>Cómo funciona la norma actual</div>
-      <div>Qué se propone con el cambio</div>
+      {explanations.map((explanation, index) => (
+        <div key={`${index}-${explanation}`}>{explanation}</div>
+      ))}
 
       <button onClick={handleClick}>{buttonText}</button>
 
