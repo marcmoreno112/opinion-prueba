@@ -4,6 +4,12 @@ import Tree from "../../components/Tree/Tree";
 import titles from "../../utils/titles";
 
 const TopLevelPage = (): JSX.Element => {
+  const explanations: string[] = [
+    "Qué es el voto...",
+    "Cómo funciona la norma actual",
+    "Qué se propone con el cambio",
+  ];
+
   return (
     <TopLevelPageStyled>
       <h1 className="title">{titles.topLevel}</h1>
@@ -16,6 +22,7 @@ const TopLevelPage = (): JSX.Element => {
         ]}
         buttonText="Empezar"
         handleClick={() => {}}
+        explanations={explanations}
       />
     </TopLevelPageStyled>
   );

@@ -10,6 +10,8 @@ describe("Given a Tree component", () => {
 
     const buttonText = "Start";
 
+    const explanations = ["Explanation 1", "Explanation 2", "Explanation 3"];
+
     const testFunction = () => {};
 
     test("Then it should show the text passed as prop", () => {
@@ -19,6 +21,7 @@ describe("Given a Tree component", () => {
           topics={expectedTopics}
           buttonText={buttonText}
           handleClick={testFunction}
+          explanations={explanations}
         />,
       );
 
@@ -34,6 +37,7 @@ describe("Given a Tree component", () => {
           topics={expectedTopics}
           buttonText={buttonText}
           handleClick={testFunction}
+          explanations={explanations}
         />,
       );
 
@@ -50,6 +54,7 @@ describe("Given a Tree component", () => {
           topics={expectedTopics}
           buttonText={buttonText}
           handleClick={testFunction}
+          explanations={explanations}
         />,
       );
 
@@ -67,6 +72,7 @@ describe("Given a Tree component", () => {
           topics={expectedTopics}
           buttonText={buttonText}
           handleClick={handleClick}
+          explanations={explanations}
         />,
       );
 
