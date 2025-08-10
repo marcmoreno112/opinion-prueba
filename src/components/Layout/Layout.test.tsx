@@ -1,17 +1,17 @@
 import { render, screen } from "@testing-library/react";
-import App from "./App";
+import Layout from "./Layout";
 import { describe, expect, test } from "vitest";
+import GlobalStyle from "../../styles/GlobalStyles/GlobalStyles";
 import theme from "../../styles/theme/theme";
 import { ThemeProvider } from "styled-components";
-import GlobalStyle from "../../styles/GlobalStyles/GlobalStyles";
 
-describe("Given an App component", () => {
-  describe("When rendered", () => {
-    test("Then it should show a title", () => {
+describe("Given a Layout component", () => {
+  describe("When it is rendered", () => {
+    test("Then it should show a title'", () => {
       render(
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <App />
+          <Layout />
         </ThemeProvider>,
       );
 

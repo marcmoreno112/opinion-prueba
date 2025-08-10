@@ -31,6 +31,10 @@ const TreeStyled = styled.div`
     flex-direction: row;
     gap: 10px;
   }
+
+  .title {
+    font-size: 1.5rem;
+  }
 `;
 
 export default TreeStyled;
